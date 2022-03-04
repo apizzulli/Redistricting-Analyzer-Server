@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rest-service" />
-        <module name="backend" />
+        <module name="416" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="416" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="backend" options="-parameters" />
-      <module name="rest-service" options="-parameters" />
+      <module name="416" options="-parameters" />
     </option>
   </component>
 </project>

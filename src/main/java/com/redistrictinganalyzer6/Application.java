@@ -1,13 +1,13 @@
-package com.example.restservice;
+package com.redistrictinganalyzer6;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestServiceApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestServiceApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
