@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cdfa737-628d-4fb9-94b2-8129bf4ceae0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restservice/ElectionData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restservice/ElectionDataController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restservice/Greeting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restservice/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restservice/RestServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/restservice/RestServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/ElectionData$State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/ElectionData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/ElectionDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/Greeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restservice/RestServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/restservice/RestServiceApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redistrictinganalyzer6/ElectionDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redistrictinganalyzer6/ElectionDataController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,8 +252,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.RestServiceApplication" />
-      <item itemvalue="Maven.rest-service []" />
       <item itemvalue="Application.Application" />
+      <item itemvalue="Maven.rest-service []" />
     </list>
     <recent_temporary>
       <list>

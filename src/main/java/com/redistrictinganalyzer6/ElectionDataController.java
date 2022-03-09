@@ -11,21 +11,82 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class ElectionDataController {
     @GetMapping("/electiondata")
-    public ElectionData data(@RequestParam(defaultValue = "1") String id){
+    public ElectionData data(@RequestParam String state, @RequestParam int district){
 //        If the id passed is 1, the current state is Tennessee.
-//        Population can be a random number between 500,000 and 1,000,000
-        int population=0,democratVotes=0,republicanVotes=0;
-        if(id.equals("1")) {
-            population = (int) ((Math.random() * (2000000 - 700000)) + 700000);
-            democratVotes = (int) ((Math.random() * (population - 2000)) + 2000);
-            republicanVotes = (int) ((Math.random() * (population - 2000)) + 2000);
+//        Data is hard coded at this point, but this will soon be data populated from our database.
+
+        int democratVotes=0;
+        int repubVotes=0;
+        switch(state) {
+            case "TN":
+                switch (district) {
+                    case 1:
+                        democratVotes = 2002;
+                        repubVotes = 5504;
+                        break;
+                    case 2:
+                        democratVotes = 1221;
+                        repubVotes = 5504;
+                        break;
+                    case 3:
+                        democratVotes = 987;
+                        repubVotes = 1323;
+                        break;
+                    case 4:
+                        democratVotes = 3400;
+                        repubVotes = 2789;
+                        break;
+                    case 5:
+                        democratVotes = 679;
+                        repubVotes = 1760;
+                        break;
+                    case 6:
+                        democratVotes = 1190;
+                        repubVotes = 1201;
+                        break;
+                    case 7:
+                        democratVotes = 2054;
+                        repubVotes = 3509;
+                        break;
+                    case 8:
+                        democratVotes = 2340;
+                        repubVotes = 5504;
+                        break;
+                    case 9:
+                        democratVotes = 890;
+                        repubVotes = 1203;
+                        break;
+                    default:
+                        democratVotes=0;
+                        repubVotes=0;
+                        break;
+                }
+                break;
+            case "MI":
+                switch (district) {
+                    case 1:
+                        democratVotes = 567;
+                        repubVotes = 1900;
+                        break;
+                    case 2:
+                        democratVotes = 210;
+                        repubVotes = 560;
+                        break;
+                    case 3:
+                        democratVotes = 780;
+                        repubVotes = 154;
+                        break;
+                    case 4:
+                        democratVotes = 235;
+                        repubVotes = 2789;
+                        break;
+                    default:
+                        democratVotes=0;
+                        repubVotes=0;
+                        break;
+                }
+                break;
         }
-        //If the id passed is 2, the current state is Mississippi.
-        if(id.equals("2")){
-            population = (int) ((Math.random() * (1000000 - 500000)) + 500000);
-            democratVotes = (int) ((Math.random() * (population - 3000)) + 3000);
-            republicanVotes = (int) ((Math.random() * (population - 3000)) + 3000);
-        }
-        return new ElectionData(democratVotes,republicanVotes);
+        return new ElectionData(democratVotes, repubVotes);
     }
 }
