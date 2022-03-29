@@ -14,7 +14,6 @@ public class ElectionDataController {
     public ElectionData data(@RequestParam String state, @RequestParam int district){
 //        If the id passed is 1, the current state is Tennessee.
 //        Data is hard coded at this point, but this will soon be data populated from our database.
-
         int democratVotes=0;
         int repubVotes=0;
         switch(state) {
