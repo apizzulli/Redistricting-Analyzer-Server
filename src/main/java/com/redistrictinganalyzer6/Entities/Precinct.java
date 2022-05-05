@@ -1,4 +1,4 @@
-package com.redistrictinganalyzer6;
+package com.redistrictinganalyzer6.Entities;
 
 public class Precinct {
 
