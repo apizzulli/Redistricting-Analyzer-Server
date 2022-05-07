@@ -1,50 +1,108 @@
 package com.redistrictinganalyzer6.Entities;
 import java.util.List;
-import javax.persistence.ManyToOne;
-import javax.persistence.Column;
+import javax.persistence.*;
 
 enum STATUS_TYPE{
     ENACTED, OLD, DEM_PROPOSED, REP_PROPOSED
 }
+@Entity
+@Table(name="district")
 public class District {
 
-    @Column private int id;
-    @Column private int numDistricts;
-    @Column private int seatShare;
-    @Column private int numMajMinDistricts;
-    @Column private STATUS_TYPE status;
-    @Column private double efficiencyGap;
-    @Column @ManyToOne private List<Precinct> precincts;
+    public District(){}
+    @Column(name = "district_id") @Id private Integer districtId;
+    @Column(name = "state") private String state;
+    @Column(name = "state_id") private Integer stateId;
+    @Column(name = "population") private Integer population;
+    @Column(name = "area") private double area;
+    @Column(name = "compactness") private double compactness;
+    @Column(name = "perimeter") private double perimeter;
+    @Column(name = "geometry") private String geometry;
+    @Transient private List<Precinct> precincts;
 
-    public District(int id, int numDistricts, int seatShare, int numMajMinDistricts, double efficiencyGap, List<Precinct> precincts) {
-        this.id = id;
-        this.numDistricts = numDistricts;
-        this.seatShare = seatShare;
-        this.numMajMinDistricts = numMajMinDistricts;
-        this.efficiencyGap = efficiencyGap;
+    public District(Integer districtId, String state, Integer stateId, Integer population, double area, double compactness,
+                    double perimeter, String geometry, List<Precinct>precincts) {
+        this.districtId = districtId;
+        this.state = state;
+        this.stateId = stateId;
+        this.population = population;
+        this.area = area;
+        this.compactness = compactness;
+        this.perimeter = perimeter;
+        this.geometry = geometry;
         this.precincts = precincts;
     }
 
-    public int getId() {
-        return id;
+    public Integer getDistrictId() {
+        return districtId;
     }
-    public void setId(int id) {
-        this.id = id;
+
+    public void setDistrictId(Integer districtId) {
+        this.districtId = districtId;
     }
-    public int getNumDistricts() {return numDistricts;}
-    public void setNumDistricts(int numDistricts) {this.numDistricts = numDistricts;}
-    public int getSeatShare() {return seatShare;}
-    public void setSeatShare(int seatShare) {this.seatShare = seatShare;}
-    public int getNumMajMinDistricts() {return numMajMinDistricts;}
-    public void setNumMajMinDistricts(int numMajMinDistricts) {this.numMajMinDistricts = numMajMinDistricts;}
-    public STATUS_TYPE getStatus() {return status;}
-    public void setStatus(STATUS_TYPE status) {this.status = status;}
-    public double getEfficiencyGap() {return efficiencyGap;}
-    public void setEfficiencyGap(double efficiencyGap) {this.efficiencyGap = efficiencyGap;}
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public Integer getStateId() {
+        return stateId;
+    }
+
+    public void setStateId(Integer stateId) {
+        this.stateId = stateId;
+    }
+
+    public Integer getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(Integer population) {
+        this.population = population;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public double getCompactness() {
+        return compactness;
+    }
+
+    public void setCompactness(double compactness) {
+        this.compactness = compactness;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+
+    public String getGeometry() {
+        return geometry;
+    }
+
+    public void setGeometry(String geometry) {
+        this.geometry = geometry;
+    }
+
     public List<Precinct> getPrecincts() {
         return precincts;
     }
+
     public void setPrecincts(List<Precinct> precincts) {
         this.precincts = precincts;
     }
 }
+

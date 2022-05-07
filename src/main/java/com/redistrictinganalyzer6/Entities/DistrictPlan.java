@@ -1,6 +1,7 @@
 package com.redistrictinganalyzer6.Entities;
 import javax.persistence.*;
-import javax.persistence.Entity;
+import java.util.List;
+
 
 @Entity
 @Table(name="plan")
@@ -12,14 +13,17 @@ public class DistrictPlan {
     @Column(name="num_maj_min_districts") private Integer numMajMinDistricts;
     @Column(name="status") private String status;
     @Column(name="efficiency_gap") private double efficiencyGap;
+    @Transient private List<District> districts;
 
-    public DistrictPlan(int planId, Integer numDistricts, Integer seatShare, Integer numMajMinDistricts, String status, double efficiencyGap ){
+    public DistrictPlan(int planId, Integer numDistricts, Integer seatShare, Integer numMajMinDistricts, String status,
+                        double efficiencyGap, List<District> districts ){
         this.planId = planId;
         this.numDistricts = numDistricts;
         this.seatShare = seatShare;
         this.numMajMinDistricts = numMajMinDistricts;
         this.status = status;
         this.efficiencyGap = efficiencyGap;
+        this.districts = districts;
     }
 
     public int getPlanId() {return planId;}
@@ -34,4 +38,6 @@ public class DistrictPlan {
     public void setStatus(String status) {this.status = status;}
     public double getEfficiencyGap() {return efficiencyGap;}
     public void setEfficiencyGap(double efficiencyGap) {this.efficiencyGap = efficiencyGap;}
+    public List<District> getDistricts(){return this.districts;}
+    public void setDistricts(List<District> districts){this.districts = districts;}
 }

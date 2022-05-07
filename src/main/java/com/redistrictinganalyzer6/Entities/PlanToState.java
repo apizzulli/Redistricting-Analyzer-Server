@@ -3,13 +3,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="plan_to_state")
-public class PlanMap {
-
-    public PlanMap(){}
+public class PlanToState {
+    public PlanToState(){}
     @Column(name="plan_id")@Id private int planId;
     @Column(name = "state")private int stateId;
 
-    public PlanMap(int planId, int stateId){
+    public PlanToState(int planId, int stateId){
         this.planId = planId;
         this.stateId = stateId;
     }
