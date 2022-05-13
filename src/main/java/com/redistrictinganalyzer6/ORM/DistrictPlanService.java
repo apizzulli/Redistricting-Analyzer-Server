@@ -20,8 +20,8 @@ public class DistrictPlanService {
         for(PlanToState planStatePair: planMapping) {
             for (DistrictPlan plan : plans) {
                 if (plan.getPlanId() == planStatePair.getPlanId() && planStatePair.getStateId() == stateId) {
-                    plansToReturn.add(plan);
                     districtService.addDistrictsToPlan(plan);
+                    plansToReturn.add(plan);
                 }
             }
         }

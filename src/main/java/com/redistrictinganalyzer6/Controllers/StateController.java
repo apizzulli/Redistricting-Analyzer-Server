@@ -22,23 +22,15 @@ public class StateController {
     @Autowired private StateService stateService;
     @Autowired private DistrictPlanService districtPlanService;
     @Autowired private PrecinctService precinctService;
+   // @Autowired private CountyService countyService;
     //The first function called when a client clicks a state.
     @GetMapping("/getState")
+    //need: total pop, num district plans,
     public State getState(@RequestParam("stateID")int stateID, HttpServletRequest request) {
         State state = stateService.getState(stateID);
         request.setAttribute("CURRENT_STATE", state);
         List<DistrictPlan> plans = districtPlanService.getAllPlansForState(stateID);
         state.setDistrictPlans(plans);
-//        for(PrecToDistrict precDistMap: precToDistMap){
-//            for(Precinct precinct: precincts){
-//                if(precinct.getPrecinctId()==precDistMap.getPrecinctId() && precDistMap.get)
-//            }
-//        }
-
-
-        //state.setDistrictPlans(plansToReturn);
-        System.out.println("hi");
-
         return state;
     }
 

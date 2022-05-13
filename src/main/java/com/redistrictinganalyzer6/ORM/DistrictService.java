@@ -11,7 +11,6 @@ import java.util.List;
 public class DistrictService {
     @Autowired com.redistrictinganalyzer6.Repositories.DistrictRepo districtRepo;
     @Autowired com.redistrictinganalyzer6.Repositories.DistrictToPlanRepo districtToPlanRepo;
-    @Autowired com.redistrictinganalyzer6.ORM.PrecinctService precinctService;
     public void addDistrictsToPlan(DistrictPlan plan){
         List<District> districts = (List<District>) districtRepo.findAll();
         List<DistrictToPlan> districtToPlan = (List<DistrictToPlan>) districtToPlanRepo.findAll();
@@ -20,8 +19,8 @@ public class DistrictService {
             for(District district: districts){
                 if(district.getDistrictId()==planStatePair.getDistrictId()
                         && planStatePair.getPlanId()==plan.getPlanId()){
+                   // countyService.addCountiesToDistrict(district);
                     districtsToReturn.add(district);
-                    precinctService.addPrecinctsToDistrict(district);
                 }
             }
         }

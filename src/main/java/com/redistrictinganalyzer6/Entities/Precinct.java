@@ -1,5 +1,6 @@
 package com.redistrictinganalyzer6.Entities;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="precinct")
@@ -14,9 +15,10 @@ public class Precinct {
     @Column(name="black") private int blackVotes;
     @Column(name="native") private int nativeVotes;
     @Column(name="asian") private int asianVotes;
+    @Transient private List<Precinct> precincts;
 
     public Precinct(int precinctId, int population, int votesDemocrat, int votesRepublican,
-                    int state, int whiteVotes, int blackVotes, int nativeVotes, int asianVotes) {
+                    int state, int whiteVotes, int blackVotes, int nativeVotes, int asianVotes, List<Precinct>precincts) {
         this.precinctId = precinctId;
         this.population = population;
         this.votesDemocrat = votesDemocrat;
@@ -26,6 +28,7 @@ public class Precinct {
         this.blackVotes = blackVotes;
         this.nativeVotes = nativeVotes;
         this.asianVotes = asianVotes;
+        this.precincts=precincts;
     }
 
     public int getPrecinctId() {
