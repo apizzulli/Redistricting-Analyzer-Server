@@ -17,11 +17,10 @@ public class District {
     @Column(name = "area") private double area;
     @Column(name = "compactness") private double compactness;
     @Column(name = "perimeter") private double perimeter;
-    @Column(name = "geometry") private String geometry;
     @Transient private List<Precinct> precincts;
 
     public District(Integer districtId, String state, Integer stateId, Integer population, double area, double compactness,
-                    double perimeter, String geometry, List<Precinct>precincts) {
+                    double perimeter, List<Precinct>precincts) {
         this.districtId = districtId;
         this.state = state;
         this.stateId = stateId;
@@ -29,7 +28,6 @@ public class District {
         this.area = area;
         this.compactness = compactness;
         this.perimeter = perimeter;
-        this.geometry = geometry;
         this.precincts = precincts;
     }
 
@@ -87,14 +85,6 @@ public class District {
 
     public void setPerimeter(double perimeter) {
         this.perimeter = perimeter;
-    }
-
-    public String getGeometry() {
-        return geometry;
-    }
-
-    public void setGeometry(String geometry) {
-        this.geometry = geometry;
     }
 
     public List<Precinct> getPrecincts() {

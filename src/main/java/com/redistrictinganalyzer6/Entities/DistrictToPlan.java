@@ -6,8 +6,9 @@ import javax.persistence.*;
 public class DistrictToPlan {
 
     public DistrictToPlan(){}
-    @Column(name="plan_id") @Id private int planId;
-    @Column(name="district_id") private int districtId;
+    @Column(name="district_id")@Id private int districtId;
+    @Column(name="plan_id") private int planId;
+
 
     public DistrictToPlan(int planId, int districtId) {
         this.planId = planId;

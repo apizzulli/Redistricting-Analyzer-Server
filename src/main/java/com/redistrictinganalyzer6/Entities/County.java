@@ -39,4 +39,10 @@ public class County {
     public void setState(String state) {
         this.state = state;
     }
+
+    public List<Precinct> getPrecincts(){return this.precincts;}
+
+    public void setPrecincts(List<Precinct>precincts){this.precincts=precincts;}
+
+
 }

@@ -14,9 +14,11 @@ public class DistrictPlan {
     @Column(name="status") private String status;
     @Column(name="efficiency_gap") private double efficiencyGap;
     @Transient private List<District> districts;
+    @Transient private List<Coordinates> demCoords;
+    @Transient private List<Coordinates> repCoords;
 
     public DistrictPlan(int planId, Integer numDistricts, Integer seatShare, Integer numMajMinDistricts, String status,
-                        double efficiencyGap, List<District> districts ){
+                        double efficiencyGap, List<District> districts, List<Coordinates> demCoords, List<Coordinates> repCoords){
         this.planId = planId;
         this.numDistricts = numDistricts;
         this.seatShare = seatShare;
@@ -24,6 +26,8 @@ public class DistrictPlan {
         this.status = status;
         this.efficiencyGap = efficiencyGap;
         this.districts = districts;
+        this.demCoords = demCoords;
+        this.repCoords = repCoords;
     }
 
     public int getPlanId() {return planId;}
@@ -40,4 +44,8 @@ public class DistrictPlan {
     public void setEfficiencyGap(double efficiencyGap) {this.efficiencyGap = efficiencyGap;}
     public List<District> getDistricts(){return this.districts;}
     public void setDistricts(List<District> districts){this.districts = districts;}
+    public List<Coordinates> getDemCoords() {return demCoords;}
+    public void setDemCoords(List<Coordinates>demCoords){this.demCoords=demCoords;}
+    public List<Coordinates> getRepCoords(){return this.repCoords;}
+    public void setRepCoords(List<Coordinates>repCoords){this.repCoords=repCoords;}
 }

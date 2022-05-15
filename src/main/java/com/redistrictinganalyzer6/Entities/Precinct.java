@@ -11,24 +11,22 @@ public class Precinct {
     @Column(name="votesDemocrat") private int votesDemocrat;
     @Column(name="votesRepublican") private int votesRepublican;
     @Column(name="state") private int state;
-    @Column(name="white") private int whiteVotes;
-    @Column(name="black") private int blackVotes;
-    @Column(name="native") private int nativeVotes;
-    @Column(name="asian") private int asianVotes;
-    @Transient private List<Precinct> precincts;
+    @Column(name="white") private int whitePop;
+    @Column(name="black") private int blackPop;
+    @Column(name="native") private int nativePop;
+    @Column(name="asian") private int asianPop;
 
     public Precinct(int precinctId, int population, int votesDemocrat, int votesRepublican,
-                    int state, int whiteVotes, int blackVotes, int nativeVotes, int asianVotes, List<Precinct>precincts) {
+                    int state, int whitePop, int blackPop, int nativePop, int asianPop) {
         this.precinctId = precinctId;
         this.population = population;
         this.votesDemocrat = votesDemocrat;
         this.votesRepublican = votesRepublican;
         this.state = state;
-        this.whiteVotes = whiteVotes;
-        this.blackVotes = blackVotes;
-        this.nativeVotes = nativeVotes;
-        this.asianVotes = asianVotes;
-        this.precincts=precincts;
+        this.whitePop = whitePop;
+        this.blackPop = blackPop;
+        this.nativePop = nativePop;
+        this.asianPop = asianPop;
     }
 
     public int getPrecinctId() {
@@ -63,36 +61,36 @@ public class Precinct {
         this.state = state;
     }
 
-    public int getWhiteVotes() {
-        return whiteVotes;
+    public int getwhitePop() {
+        return whitePop;
     }
 
-    public void setWhiteVotes(int whiteVotes) {
-        this.whiteVotes = whiteVotes;
+    public void setwhitePop(int whitePop) {
+        this.whitePop = whitePop;
     }
 
-    public int getBlackVotes() {
-        return blackVotes;
+    public int getblackPop() {
+        return blackPop;
     }
 
-    public void setBlackVotes(int blackVotes) {
-        this.blackVotes = blackVotes;
+    public void setblackPop(int blackPop) {
+        this.blackPop = blackPop;
     }
 
-    public int getNativeVotes() {
-        return nativeVotes;
+    public int getnativePop() {
+        return nativePop;
     }
 
-    public void setNativeVotes(int nativeVotes) {
-        this.nativeVotes = nativeVotes;
+    public void setnativePop(int nativePop) {
+        this.nativePop = nativePop;
     }
 
-    public int getAsianVotes() {
-        return asianVotes;
+    public int getasianPop() {
+        return asianPop;
     }
 
-    public void setAsianVotes(int asianVotes) {
-        this.asianVotes = asianVotes;
+    public void setasianPop(int asianPop) {
+        this.asianPop = asianPop;
     }
 
     public int getPopulation() {
