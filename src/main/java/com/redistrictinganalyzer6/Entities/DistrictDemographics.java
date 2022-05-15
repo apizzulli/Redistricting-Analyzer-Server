@@ -7,6 +7,7 @@ public class DistrictDemographics {
     private int blackPop;
     private int nativePop;
     private int asianPop;
+    private int totalPop;
 
     public int getDistrictId() {
         return districtId;
@@ -47,12 +48,15 @@ public class DistrictDemographics {
     public void setAsianPop(int asianPop) {
         this.asianPop = asianPop;
     }
+    public int getTotalPop(){return this.totalPop;}
+    public void setTotalPop(int totalPop){this.totalPop=totalPop;}
 
-    public DistrictDemographics(int districtId, int whitePop, int blackPop, int nativePop, int asianPop) {
+    public DistrictDemographics(int districtId, int whitePop, int blackPop, int nativePop, int asianPop, int totalPop) {
         this.districtId = districtId;
         this.whitePop = whitePop;
         this.blackPop = blackPop;
         this.nativePop = nativePop;
         this.asianPop = asianPop;
+        this.totalPop=totalPop;
     }
 }

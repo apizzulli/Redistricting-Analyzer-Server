@@ -10,6 +10,7 @@ import java.util.List;
 public class StateService {
     @Autowired private com.redistrictinganalyzer6.Repositories.StateRepo stateRepo;
     @Autowired private com.redistrictinganalyzer6.ORM.DistrictPlanService districtPlanService;
+    @Autowired private com.redistrictinganalyzer6.ORM.SeawulfService seawulfService;
     public State[] assembleStates(){
         Optional<State>s1 = stateRepo.findById(1);
         Optional<State>s2 = stateRepo.findById(2);
@@ -23,6 +24,9 @@ public class StateService {
         TN.setDistrictPlans(TNplans);
         MS.setDistrictPlans(MSplans);
         NC.setDistrictPlans(NCplans);
+        seawulfService.addSeawulfDataToState(TN);
+        seawulfService.addSeawulfDataToState(MS);
+        seawulfService.addSeawulfDataToState(NC);
         State[] states= new State[3];
         states[0] = TN;
         states[1] = MS;
