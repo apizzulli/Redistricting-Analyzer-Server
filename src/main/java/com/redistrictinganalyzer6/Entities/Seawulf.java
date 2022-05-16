@@ -3,17 +3,17 @@ import javax.persistence.*;
 @Entity
 public class Seawulf {
     public Seawulf(){}
-    @Column(name="id") @Id private int id;
+    @Column(name="id") @Id private Integer id;
     @Column(name="state") private String state;
     @Column(name="group") private String group;
-    @Column(name="district_id")private int districtId;
+    @Column(name="District")private int districtId;
     @Column(name="min")private double min;
     @Column(name="first")private double first;
     @Column(name="median") private double median;
     @Column(name="third") private double third;
     @Column(name="max") private double max;
 
-    public Seawulf(int id, String state, String group, int districtId, double min, double first, double median, double third, double max) {
+    public Seawulf(Integer id, String state, String group, int districtId, double min, double first, double median, double third, double max) {
         this.id = id;
         this.state = state;
         this.group = group;
@@ -25,11 +25,11 @@ public class Seawulf {
         this.max = max;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
